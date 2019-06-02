@@ -1,0 +1,41 @@
+﻿@model  MVCPractice.Models.Employees
+@model  MVCPractice.Models.HomeModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+            <p>@Html.LabelFor(m => m.Employee, new { @id = "lbClient" }) </p>
+            <p>@Html.TextBoxFor(m => m.Employee)</p>
+            <p>@Html.ValidationMessageFor(m => m.Employee)</p>
+
+        </div>
+        <div class="row">
+            <p>@Html.LabelFor(m => m.Email, new { @id = "lbemail" }) </p>
+            <p>@Html.TextBoxFor(m => m.Email)</p>
+            <p>@Html.ValidationMessageFor(m => m.Email)</p>
+        </div>
+
+
+
+        <p><input type="submit" value="Generate" /></p>
+
+    }
+
+</div>
+
+<script src="~/Scripts/TXTLoader.js"></script>
+<div class="row">
+    <h2>Read TXT</h2>
+    <p><input type="file" id="tbFileLoader" onchange="GetUrl(this)" /></p>
+    <p><input type="button" value="Cargar" onclick="LoadFile();" /></p>
+</div>
+@*<span class="btn btn-success fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Add files...</span>
+        <input type="file" name="files[]" multiple>
+    </span>*@
