@@ -19,6 +19,79 @@ namespace PracticeCSharp
             return numpares;
 
         }
+        public static void InvertirVadores(int A, int B) {
+            
+            Console.WriteLine($"Valor Inicial A={A}, B={B}");
+            A = A + B;
+            B = A - B;
+            A = A - B;
+
+            Console.WriteLine($"A={A}, B={B}");
+            Console.ReadLine();
+
+        }
+        public static int[] NumMasPopular()
+        {
+           
+            int Veces = 0;
+            int[] arr = new[] { 34, 31, 35, 32 };
+
+        
+
+            return arr;
+
+        }
+
+        public static bool IsCasiPalindromo(string palabra = "anana")
+        {
+            bool IsValid = false;
+            palabra = palabra.ToLower();
+            if (palabra.Length > 0)
+            {
+                var inverse = new string(palabra.Reverse().ToArray());
+                if (palabra == inverse || palabra.Substring(0, palabra.Length - 1) == inverse.Substring(0, inverse.Length - 1))
+                    IsValid = true;
+
+            };
+             
+            return IsValid;
+
+        }
+
+        public static void FnDistanciaPromedio()
+        {
+            List<int[]> Lista = new List<int[]>();
+            double x1=1.5, x2 = 4.2, x3 = 7.3, y1 = 0, y2 = 9, y3 = 6.2;
+            var distProm = Math.Sqrt(Math.Pow((x1-y1) ,2) + Math.Pow((x2 - y2), 2)  + Math.Pow((x3 - y3) ,2));
+
+            Console.WriteLine(distProm);
+            Console.ReadLine();
+
+
+
+        }
+
+        public static int GetDuplicado()
+        {
+ 
+
+            var arr = new[] { 2, 3, 4, 3, 2, 1 };
+            var ent = 3;
+            int counter = 0;
+            foreach (var t in arr)
+            {
+                if (t == ent)
+                {
+                    counter= counter + 1;
+                }
+            }
+
+            
+
+            return counter;
+
+        }
+
         public static void GetListaPareseImpares()
         {
             List<int> Lista = new List<int>();

@@ -86,13 +86,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
-    <Compile Include="Controllers\TesterApController.cs" />
+    <Compile Include="Controllers\AuthorsController.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CustomerModels.cs" />
-    <Compile Include="Models\ViewModels\CustomerViewModels.cs" />
+    <Compile Include="Models\Authors.cs" />
+    <Compile Include="Models\Books.cs" />
+    <Compile Include="Models\IAuthors.cs" />
+    <Compile Include="Models\IBooks.cs" />
+    <Compile Include="Models\ViewModels\AuthorsViewModel.cs" />
+    <Compile Include="Models\ViewModels\BooksViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

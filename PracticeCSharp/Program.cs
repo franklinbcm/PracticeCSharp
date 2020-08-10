@@ -12,6 +12,11 @@ namespace PracticeCSharp
         static void Main(string[] args)
         {
 
+            var kr = TestSingleton.LazyOb;
+            var p = TestSingleton.LazyOb;
+
+            var n = TestSingleton.MySingle;
+            var q = TestSingleton.MySingle;
 
             //Entity.Dealers dea = new Entity.Dealers();
             //Entity.Planes pla = new Entity.Planes();
@@ -33,6 +38,21 @@ namespace PracticeCSharp
             //Console.WriteLine(Singleton.MiSingle);
             //Fibonacy();
 
+            //ConvertTexToBinary();
+            // Listas.GetListaDistanciaPromedio();
+
+            Console.WriteLine(Environment.NewLine);
+            Console.WriteLine(new XmlConverter().GetXml()); //Generar XML desde una Clase
+            Console.WriteLine(Environment.NewLine);
+            Console.WriteLine(Environment.NewLine);
+            new XmlConverter().ConvertXmlToJson();
+
+
+            Console.WriteLine(Environment.NewLine);
+
+            Listas.InvertirVadores(3,5);
+            Listas.IsCasiPalindromo();
+            Listas.GetDuplicado();
             List<int> Lista = new List<int>();
             Lista.AddRange(new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
            var Pares = Lista.FindAll((i) => (i % 2 == 0));
@@ -55,6 +75,8 @@ namespace PracticeCSharp
             var ChanteText = Text.Reverse().ToArray();
 
             Listas.NumerosPrimos(100);
+
+ 
             Console.ReadLine();
 
 
@@ -78,5 +100,16 @@ namespace PracticeCSharp
             var re = new string (rever.Reverse().ToArray());
             
         }
+
+
+        public static void ConvertTexToBinary(string Text = "A")
+        {
+            var dataAsciiCode = Encoding.ASCII.GetBytes(Text);//Get ASCII Code
+            var binaryStr = string.Join(" ", dataAsciiCode.Select(byt => Convert.ToString(byt, 2).PadLeft(8, '0'))); //ToBinary
+            Console.WriteLine(binaryStr);
+            Console.ReadLine();
+
+        }
+
     }
 }
