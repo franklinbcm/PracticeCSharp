@@ -49,7 +49,6 @@ namespace PracticeCSharp
         public string Name { get; set; }
         public int Population { get; set; }
 
-
         public List<Paises> CountryList()
         {
             List<Paises> Lista = new List<Paises>();
